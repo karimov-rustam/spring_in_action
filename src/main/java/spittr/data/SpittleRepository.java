@@ -1,11 +1,9 @@
 package spittr.data;
 
-import org.springframework.stereotype.Repository;
 import spittr.model.Spittle;
 
 import java.util.List;
 
-@Repository
 public interface SpittleRepository {
 
     List<Spittle> findRecentSpittles();
