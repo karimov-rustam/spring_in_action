@@ -11,13 +11,12 @@ public class Spittle {
     private final Date time;
     private Double latitude;
     private Double longitude;
-    private Object that;
 
     public Spittle(String message, Date time) {
-        this(message, time, null, null);
+        this(null, message, time, null, null);
     }
 
-    public Spittle(String message, Date time, Double latitude, Double longitude) {
+    public Spittle(Long id, String message, Date time, Double latitude, Double longitude) {
         this.id = null;
         this.message = message;
         this.time = time;
@@ -59,7 +58,6 @@ public class Spittle {
                 .append(time, spittle.time)
                 .append(latitude, spittle.latitude)
                 .append(longitude, spittle.longitude)
-                .append(that, spittle.that)
                 .isEquals();
     }
 
@@ -71,7 +69,6 @@ public class Spittle {
                 .append(time)
                 .append(latitude)
                 .append(longitude)
-                .append(that)
                 .toHashCode();
     }
 }

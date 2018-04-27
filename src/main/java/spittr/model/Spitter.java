@@ -11,19 +11,19 @@ public class Spitter {
     private Long id;
 
     @NotNull
-    @Size(min = 5, max = 25)
+    @Size(min = 5, max = 25, message = "{username.size}")
     private String username;
 
     @NotNull
-    @Size(min = 5, max = 25)
+    @Size(min = 5, max = 25, message = "{password.size}")
     private String password;
 
     @NotNull
-    @Size(min = 4, max = 25)
+    @Size(min = 4, max = 25, message = "{firstName.size}")
     private String firstName;
 
     @NotNull
-    @Size(min = 4, max = 25)
+    @Size(min = 4, max = 25, message = "{lastName.size}")
     private String lastName;
 
     @NotNull
